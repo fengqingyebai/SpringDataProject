@@ -23,7 +23,7 @@ public class StudentDaoSpringJdbcImplTest {
 
     @Before
     public void setContext(){
-        context = new ClassPathXmlApplicationContext("bean.xml");
+        context = new ClassPathXmlApplicationContext("bean-new.xml");
         studentDao = (StudentDao)context.getBean("studentDao");
         System.out.println("setContext");
     }
