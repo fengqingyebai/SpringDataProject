@@ -2,6 +2,7 @@ package com.link.domain;
 
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -11,6 +12,10 @@ import javax.persistence.Id;
  * @author link
  * @create 2018-04-06-12:00
  */
+/**
+ * 雇员:  先开发实体类===>自动生成数据表
+ */
+@Entity
 public class Employee {
     private Integer id;
 

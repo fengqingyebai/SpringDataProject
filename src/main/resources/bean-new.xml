@@ -39,4 +39,19 @@ http://www.springframework.org/schema/data/jpa http://www.springframework.org/sc
             </props>
         </property>
     </bean>
+
+
+    <!--3.配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <!--4、配置支持注解的事务-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!--5 配置springdata-->
+    <jpa:repositories base-package="com.link" entity-manager-factory-ref="entityManagerFactory"/>
+
+    <context:component-scan base-package="com.link"/>
+
 </beans>
