@@ -2,6 +2,7 @@ package com.link.repository;
 
 
 import com.link.domain.Employee;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.RepositoryDefinition;
 import org.springframework.data.repository.query.Param;
@@ -50,5 +51,14 @@ public interface EmployeeRepository  {//extends Repository<Employee,Integer> {
 
   @Query(nativeQuery =true,value = "select count(1) from employee")
   public Long getCount();
+
+  @Modifying
+  @Query("update Employee o set o.age = :age where o.id=:id ")
+  void updateEmployee(@Param("id") Integer id,@Param("age") Integer age);
+
+
+  @Modifying
+  @Query("delete  from Employee o where o.id=:id ")
+  void deleteEmployee(@Param("id") Integer id);
 
 }

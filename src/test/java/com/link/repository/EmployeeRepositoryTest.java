@@ -151,8 +151,7 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void testGetCount() {
-        long count = employeeRepository.getCount();
-        System.out.println("count:"+count);
+        employeeRepository.updateEmployee(1,60);
     }
 
 
