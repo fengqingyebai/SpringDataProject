@@ -1,4 +1,4 @@
-package com.link.crudRepository;
+package com.link.repository;
 
 import com.link.domain.Employee;
 import org.springframework.data.repository.CrudRepository;

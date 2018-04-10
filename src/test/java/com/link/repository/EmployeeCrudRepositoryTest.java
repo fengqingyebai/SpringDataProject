@@ -1,7 +1,6 @@
-package com.link.crudRepository;
+package com.link.repository;
 
 import com.link.domain.Employee;
-import com.link.repository.EmployeeRepository;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
